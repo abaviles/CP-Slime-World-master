@@ -29,7 +29,7 @@ class Overworld extends Phaser.Scene {
         terrainLayer.setCollisionByProperty({ collides: true })
         treeLayer.setCollisionByProperty({ collides: true })
 
-        const slimeSpawn = map.findObject('slimeSpawn', obj => obj.name ==='spawns')
+        const slimeSpawn = map.findObject('spawns', obj => obj.name === 'slimeSpawn')
 
         // add slime
         this.slime = this.physics.add.sprite(slimeSpawn.x, slimeSpawn.y, 'slime', 0)
